@@ -18,18 +18,21 @@ int main(){
     printf("\n\nO valor secreto eh xx, tente descobrir qual eh!\n\n");
 
     int chute;
+
+    for(int x = 1; x <= 3; x++){
+        printf("\nTentativa %d de 3\n",x);
     printf("Qual eh o seu chute? ");
     scanf("%d",&chute);
     printf("\nSeu chute foi %d\n", chute);
     if(chute == numeroSecreto){
-        printf("Acertou");
+        printf("Acertou\n");
     }else{
         if(chute>numeroSecreto){
-            printf("Errou! valor do chute foi maior que o valor secreto");
+            printf("\nErrou! valor do chute foi maior que o valor secreto\n");
     }
     if(chute<numeroSecreto){
-        printf("Errou! valor do chute foi menor que o valor secreto");
+        printf("\nErrou! valor do chute foi menor que o valor secreto\n");
     }
     }
-
+    }
 }
