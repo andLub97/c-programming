@@ -8,7 +8,7 @@
 */
 
 #include <stdio.h>
-
+#define TENTATIVAS 3
 int main(){
     printf("############\n");
     printf("Vamos jogar!");
@@ -18,14 +18,21 @@ int main(){
     printf("\n\nO valor secreto eh xx, tente descobrir qual eh!\n\n");
 
     int chute;
-
-    for(int x = 1; x <= 3; x++){
-        printf("\nTentativa %d de 3\n",x);
+    
+    for(int x = 1; x <= TENTATIVAS; x++){
+        printf("\nTentativa %d de %d\n",x,TENTATIVAS);
     printf("Qual eh o seu chute? ");
     scanf("%d",&chute);
+
     printf("\nSeu chute foi %d\n", chute);
+    if(chute<0){
+        printf("valores negativos nao sao permitidos!\n");
+        x--;
+        continue;
+    }
     if(chute == numeroSecreto){
         printf("Acertou\n");
+        break;
     }else{
         if(chute>numeroSecreto){
             printf("\nErrou! valor do chute foi maior que o valor secreto\n");
