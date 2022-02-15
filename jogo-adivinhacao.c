@@ -10,5 +10,26 @@
 #include <stdio.h>
 
 int main(){
+    printf("############\n");
     printf("Vamos jogar!");
+    printf("\n############");
+
+    int numeroSecreto = 31;
+    printf("\n\nO valor secreto eh xx, tente descobrir qual eh!\n\n");
+
+    int chute;
+    printf("Qual eh o seu chute? ");
+    scanf("%d",&chute);
+    printf("\nSeu chute foi %d\n", chute);
+    if(chute == numeroSecreto){
+        printf("Acertou");
+    }else{
+        if(chute>numeroSecreto){
+            printf("Errou! valor do chute foi maior que o valor secreto");
+    }
+    if(chute<numeroSecreto){
+        printf("Errou! valor do chute foi menor que o valor secreto");
+    }
+    }
+
 }
